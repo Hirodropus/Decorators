@@ -3,7 +3,7 @@ from datetime import datetime
 
 def logger(old_function):
     def new_function(*args, **kwargs):
-        call_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        call_time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         func_name = old_function.__name__
         result = old_function(*args, **kwargs)
         log_entry = (f'В {call_time} - функция {func_name} с аргументами {args} и '

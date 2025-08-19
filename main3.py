@@ -4,7 +4,7 @@ from datetime import datetime
 def logger(path):
     def __logger(old_function):
         def new_function(*args, **kwargs):
-            current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            current_time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
             function_name = old_function.__name__
             result = old_function(*args, **kwargs)
             log_entry = (f'В {current_time} - функция {function_name} c аргументами {args} и'
@@ -49,7 +49,7 @@ def test_2():
 
     assert isinstance(flat_generator(list_of_lists_1), types.GeneratorType)
 
-    return "Тест пройден успешно"
+    return 'Тест пройден успешно'
 
 
 if __name__ == '__main__':
